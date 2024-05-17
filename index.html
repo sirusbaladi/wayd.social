@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wayd. - Exclusively by Invitation.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 6rem;
+      margin: 0;
+      transition: transform 0.2s ease;
+    }
+    p {
+      font-size: 1.75rem;
+      margin: 0;
+      margin-top: 20px;
+      transition: transform 0.2s ease;
+    }
+ .instagram {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+    }
+    .instagram a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .instagram img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+    }
+    .instagram img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>wayd.</h1>
+    <p>Exclusively by Invitation</p>
+  </div>
+  <div class="instagram">
+    <a href="https://www.instagram.com/wayd.app/" target="_blank">
+       <img src="insta.png" alt="Instagram">
+    </a>
+  </div>
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const { clientX: x, clientY: y } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const moveX = (x - centerX) / 50;
+      const moveY = (y - centerY) / 50;
+
+      document.querySelector('h1').style.transform = `translate(${moveX}px, ${moveY}px)`;
+      document.querySelector('p').style.transform = `translate(${moveX / 2}px, ${moveY / 2}px)`;
+    });
+  </script>
+</body>
+</html>

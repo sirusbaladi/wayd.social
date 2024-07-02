@@ -3,75 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wayd. - Exclusively by Invitation.</title>
+  <title>wayd - Maximize Real-Life Connections</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
     
-    body {
+    body, html {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      height: 100%;
       background-color: #000;
       color: #fff;
-      font-family: sans-serif;
-      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
     }
     .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .header {
       text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+    }
+	 .logo {
+      max-width: 600px; /* Adjust this value based on your logo's dimensions */
+      height: auto;
+      transition: transform 0.2s ease;
     }
     h1 {
-      font-size: 6rem;
+      font-size: 8rem;
+      font-weight: 700;
       margin: 0;
       transition: transform 0.2s ease;
+	  color: #47B6E8
     }
-    p {
-      font-size: 1.75rem;
-      margin: 0;
-      margin-top: 20px;
-      transition: transform 0.2s ease;
+    .tagline {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin: 20px 0 0;
+      opacity: 0.8;
     }
- .instagram {
+    .join-team {
       position: absolute;
-      bottom: 20px;
-      text-align: center;
-    }
-    .instagram a {
+      top: 20px;
+      right: 20px;
       color: #fff;
       text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    .join-team:hover {
+      opacity: 1;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .left-column {
+      flex: 1;
+      padding-right: 60px;
+    }
+    .right-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    .feature h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .feature p {
+      font-size: 1.5rem;
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+    .app-screenshot {
+      max-width: 60%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 80px;
+    }
+    .invitation {
+      font-size: 1.2rem;
+      font-weight: 300;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+    .instagram {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      display: inline-block;
+    }
+    .instagram:hover {
+      opacity: 1;
     }
     .instagram img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s ease;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 5px;
     }
-    .instagram img:hover {
-      transform: scale(1.1);
+    @media (max-width: 968px) {
+      .content {
+        flex-direction: column;
+      }
+      .left-column {
+        padding-right: 0;
+        margin-bottom: 40px;
+      }
+      .join-team {
+        position: static;
+        margin-top: 20px;
+        display: block;
+      }
+      .feature h2 {
+        font-size: 2.5rem;
+      }
+      .feature p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>wayd.</h1>
-    <p>Exclusively by Invitation</p>
-  </div>
-  <div class="instagram">
-    <a href="https://www.instagram.com/wayd.app/" target="_blank">
-       <img src="insta.png" alt="Instagram">
-    </a>
+    <div class="header">
+      <img src="wayd.png" alt="wayd logo" class="logo" id="logo">
+      <p class="tagline">The first app designed to maximize your real-life interactions</p>
+      <a href="join-the-team.html" class="join-team">Join The Team</a>
+    </div>
+    <div class="content">
+      <div class="left-column">
+        <div class="features">
+          <div class="feature">
+            <h2>🌟 Prioritize Real Life</h2>
+            <p>Unlike other apps that keep you glued to your screen, wayd is designed to make you spend more time with friends in person</p>
+          </div>
+          <div class="feature">
+            <h2>⏳ Authentic Connections only</h2>
+            <p>Friends you don't interact with for a year are automatically removed</p>
+          </div>
+          <div class="feature">
+            <h2>🌐 Expand Your Circle</h2>
+            <p>Hang out more with your existing friends and make new friends</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <img src="screenshot.png" alt="wayd. app screenshot" class="app-screenshot">
+      </div>
+    </div>
+    <div class="footer">
+      <p class="invitation">Exclusively by invitation</p>
+      <a href="https://www.instagram.com/wayd.app/" target="_blank" class="instagram">
+        <img src="insta.png" alt="Instagram">
+        
+      </a>
+    </div>
   </div>
   <script>
     document.addEventListener('mousemove', (e) => {
+      const logo = document.getElementById('logo');
       const { clientX: x, clientY: y } = e;
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
       const moveX = (x - centerX) / 50;
       const moveY = (y - centerY) / 50;
-
-      document.querySelector('h1').style.transform = `translate(${moveX}px, ${moveY}px)`;
-      document.querySelector('p').style.transform = `translate(${moveX / 2}px, ${moveY / 2}px)`;
+      logo.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
   </script>
 </body>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="icon.png" />
+   <link rel="icon" type="image/x-icon" href="icon.png" />
+
   <title>wayd - Maximize Real-Life Connections</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
@@ -54,12 +55,20 @@
       right: 20px;
       color: #fff;
       text-decoration: none;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
+     background-color: rgba(71, 182, 232, 0.1); /* Light blue background */
+      border: 1px solid rgba(71, 182, 232, 0.5); /* Light blue border */
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
-    .join-team:hover {
-      opacity: 1;
+        .join-team:hover {
+      background-color: rgba(71, 182, 232, 0.2);
+      border-color: rgba(71, 182, 232, 0.7);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 10px rgba(71, 182, 232, 0.2);
     }
+
     .content {
       display: flex;
       justify-content: space-between;

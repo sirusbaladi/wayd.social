@@ -224,6 +224,27 @@
             .feature p {
               font-size: 1.2rem;
             }
+            .footer {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .footer-links {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+            }
+            .footer-link {
+              color: #fff;
+              text-decoration: none;
+              opacity: 0.6;
+              transition: opacity 0.3s ease;
+              font-size: 0.8rem;
+            }
+            .footer-link:hover {
+              opacity: 1;
+            }
           }
         </style>
       </head>
@@ -273,13 +294,16 @@
           </div>
           <div class="footer">
             <p class="invitation">Exclusively by invitation</p>
-            <a
-              href="https://www.instagram.com/wayd.app/"
-              target="_blank"
-              class="instagram"
-            >
-              <img src="insta.webp" alt="Instagram" />
-            </a>
+            <div class="footer-links">
+              <a
+                href="https://www.instagram.com/wayd.app/"
+                target="_blank"
+                class="instagram"
+              >
+                <img src="insta.webp" alt="Instagram" />
+              </a>
+              <a href="support.html" class="footer-link">Contact Us</a>
+            </div>
           </div>
         </div>
         <script>

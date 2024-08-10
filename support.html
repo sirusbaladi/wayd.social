@@ -20,19 +20,18 @@
       .container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         min-height: 100vh;
         padding: 40px;
         box-sizing: border-box;
-        max-width: 800px;
-        margin: 0 auto;
       }
       .header {
         text-align: center;
         margin-bottom: 40px;
       }
       .logo {
-        max-width: 30%;
+        max-width: 200px;
         height: auto;
       }
       h1 {
@@ -41,45 +40,28 @@
         margin: 20px 0;
         color: #47b6e8;
       }
-      .form-container {
-        background-color: rgba(71, 182, 232, 0.1);
-        border: 1px solid rgba(71, 182, 232, 0.5);
-        border-radius: 10px;
-        padding: 30px;
+      .support-content {
+        text-align: center;
+        max-width: 600px;
       }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
       }
-      label {
-        font-weight: 700;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        font-family: "Poppins", sans-serif;
-      }
-      textarea {
-        min-height: 150px;
-      }
-      button {
+      .contact-button {
+        display: inline-block;
         background-color: #47b6e8;
         color: #ffffff;
-        border: none;
-        padding: 10px 20px;
+        text-decoration: none;
+        padding: 15px 30px;
         border-radius: 5px;
         font-weight: 700;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
       }
-      button:hover {
+      .contact-button:hover {
         background-color: #3a92ba;
+        transform: translateY(-2px);
       }
       .footer {
         text-align: center;
@@ -94,26 +76,16 @@
       <div class="header">
         <h1>Support</h1>
       </div>
-      <div class="form-container">
-        <form
-          action="mailto:sirus@wayd.social"
-          method="POST"
-          enctype="text/plain"
+      <div class="support-content">
+        <p>
+          Need help or have a question? We're here to assist you. Click the
+          button below to contact the team.
+        </p>
+        <a
+          href="mailto:sirus@wayd.social?subject=wayd%20Support%20Request"
+          class="contact-button"
+          >Contact Support</a
         >
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
       </div>
       <div class="footer">
         <p>&copy; 2024 wayd. All rights reserved.</p>

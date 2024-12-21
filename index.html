@@ -44,7 +44,7 @@
       }
 
       .logo {
-        width: 80vmin;
+        width: 50vmin;
         height: auto;
         transition: transform 0.2s ease;
         position: relative;
@@ -58,6 +58,34 @@
         text-align: center;
         font-family: "Oswald", sans-serif;
         letter-spacing: 2px;
+      }
+      .about-section {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+        text-align: center;
+        font-weight: 300;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+      .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        margin: 30px 0;
+      }
+
+      .logo-grid img {
+        max-width: 100px;
+        max-height: 50px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-grid img:hover {
+        transform: scale(1.1);
       }
 
       .footer {
@@ -100,7 +128,7 @@
     </style>
   </head>
   <body>
-    <img src="wayd.webp" alt="wayd logo" class="logo" id="logo" />
+    <img src="wayd.png" alt="wayd logo" class="logo" id="logo" />
     <div
       class="tagline"
       style="
@@ -109,7 +137,33 @@
         font-weight: 300;
       "
     >
-      WHAT IF THE NEXT SOCIAL WORKED LIKE A SELF-DRIVING CAR?
+      WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR?
+    </div>
+    <div class="about-section">
+      <!-- Add your content about Wayd Labs here -->
+      <p>
+        We are rocket scientist working on the hardest problem in the world -
+        making humans more human with the use of AI. We are not building for
+        today. We are building for 5 years in the future.
+      </p>
+      <p>
+        At Wayd Labs Inc. you'll be surrounded by world-class talent and the
+        most ambitious individuals you'll ever meet. This is the place for you
+        to do your life's work and be remembered for years to come.
+      </p>
+
+      <p>
+        We are backed & received offers by the legendary investors who have
+        funded companies like:
+      </p>
+      <div class="logo-grid">
+        <img src="logos/spacex.png" alt="SpaceX" />
+        <img src="logos/openai.png" alt="OpenAI" />
+        <img src="logos/instagram.png" alt="Instagram" />
+        <img src="logos/cursor.png" alt="Cursor" />
+        <img src="logos/pinterest.png" alt="Pinterest" />
+        <img src="logos/stripe.png" alt="Stripe" />
+      </div>
     </div>
     <div class="footer">
       <a

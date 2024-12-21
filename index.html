@@ -7,6 +7,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Oswald:wght@500&display=swap");
 
+      /* Existing styles */
       body,
       html {
         margin: 0;
@@ -75,6 +76,45 @@
         margin: 20px 0;
       }
 
+      .video-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* New styles for mute button */
+      .mute-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        z-index: 2;
+      }
+
+      .mute-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+      }
+
+      /* Rest of the existing styles */
       .about-section {
         max-width: 600px;
         margin: 20px auto;
@@ -166,6 +206,13 @@
       <div class="tagline">
         WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR?
       </div>
+      <div class="video-container">
+        <video autoplay loop muted playsinline id="myVideo">
+          <source src="homevideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <button class="mute-button" id="muteButton">Unmute</button>
+      </div>
       <div class="about-section">
         <p>
           We are rocket scientists on a mission to build autonomous social
@@ -203,6 +250,7 @@
       <a href="join-the-team.html" class="footer-link">Join The Team</a>
     </div>
     <script>
+      // Existing logo movement script
       document.addEventListener("mousemove", (e) => {
         const logo = document.getElementById("logo");
         const { clientX: x, clientY: y } = e;
@@ -211,6 +259,20 @@
         const moveX = Math.min(Math.max((x - centerX) / 50, -30), 30);
         const moveY = Math.min(Math.max((y - centerY) / 50, -30), 30);
         logo.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      // New video mute/unmute functionality
+      const video = document.getElementById("myVideo");
+      const muteButton = document.getElementById("muteButton");
+
+      muteButton.addEventListener("click", () => {
+        if (video.muted) {
+          video.muted = false;
+          muteButton.textContent = "Mute";
+        } else {
+          video.muted = true;
+          muteButton.textContent = "Unmute";
+        }
       });
     </script>
   </body>

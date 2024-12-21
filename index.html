@@ -11,19 +11,31 @@
       html {
         margin: 0;
         padding: 0;
-        height: 100%;
+        min-height: 100vh;
         background-color: #000;
         color: #fff;
         font-family: "Poppins", sans-serif;
+      }
+
+      body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        position: relative;
+        justify-content: flex-start;
+        padding-top: 60px;
+        gap: 20px;
       }
 
       .join-team {
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
         color: #fff;
@@ -34,6 +46,7 @@
         border-radius: 20px;
         font-size: 0.9rem;
         transition: all 0.3s ease;
+        z-index: 10;
       }
 
       .join-team:hover {
@@ -45,36 +58,41 @@
 
       .logo {
         width: 50vmin;
+        max-width: 300px;
         height: auto;
         transition: transform 0.2s ease;
-        position: relative;
         will-change: transform;
+        margin-bottom: 20px;
       }
 
       .tagline {
-        margin-top: 20px;
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: #fff;
         text-align: center;
-        font-family: "Oswald", sans-serif;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
         letter-spacing: 2px;
+        margin: 20px 0;
       }
+
       .about-section {
         max-width: 600px;
-        margin: 40px auto;
-        padding: 0 20px;
+        margin: 20px auto;
         text-align: center;
         font-weight: 300;
         line-height: 1.6;
         opacity: 0.9;
       }
+
       .logo-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 20px;
         justify-items: center;
         align-items: center;
         margin: 30px 0;
+        width: 100%;
+        max-width: 600px;
       }
 
       .logo-grid img {
@@ -89,9 +107,10 @@
       }
 
       .footer {
-        position: absolute;
-        bottom: 20px;
+        width: 100%;
+        padding: 20px 0;
         text-align: center;
+        margin-top: auto;
       }
 
       .instagram {
@@ -125,44 +144,51 @@
       .footer-link:hover {
         opacity: 1;
       }
+
+      @media (max-width: 768px) {
+        .tagline {
+          font-size: 1.2rem;
+        }
+
+        .logo-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-section {
+          padding: 0 10px;
+        }
+      }
     </style>
   </head>
   <body>
-    <img src="wayd.png" alt="wayd logo" class="logo" id="logo" />
-    <div
-      class="tagline"
-      style="
-        font-size: 1.5rem;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-      "
-    >
-      WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR?
-    </div>
-    <div class="about-section">
-      <!-- Add your content about Wayd Labs here -->
-      <p>
-        We are rocket scientist working on the hardest problem in the world -
-        making humans more human with the use of AI. We are not building for
-        today. We are building for 5 years in the future.
-      </p>
-      <p>
-        At Wayd Labs Inc. you'll be surrounded by world-class talent and the
-        most ambitious individuals you'll ever meet. This is the place for you
-        to do your life's work and be remembered for years to come.
-      </p>
-
-      <p>
-        We are backed & received offers by the legendary investors who have
-        funded companies like:
-      </p>
-      <div class="logo-grid">
-        <img src="logos/spacex.png" alt="SpaceX" />
-        <img src="logos/openai.png" alt="OpenAI" />
-        <img src="logos/instagram.png" alt="Instagram" />
-        <img src="logos/cursor.png" alt="Cursor" />
-        <img src="logos/pinterest.png" alt="Pinterest" />
-        <img src="logos/stripe.png" alt="Stripe" />
+    <div class="main-content">
+      <img src="wayd.png" alt="wayd logo" class="logo" id="logo" />
+      <div class="tagline">
+        WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR?
+      </div>
+      <div class="about-section">
+        <p>
+          We are rocket scientist working on the hardest problem in the world -
+          making humans more human with the use of AI. We are not building for
+          today. We are building for 5 years in the future.
+        </p>
+        <p>
+          At Wayd Labs Inc. you'll be surrounded by world-class talent and the
+          most ambitious individuals you'll ever meet. This is the place for you
+          to do your life's work and be remembered for years to come.
+        </p>
+        <p>
+          We are backed & received offers by the legendary investors who have
+          funded companies like:
+        </p>
+        <div class="logo-grid">
+          <img src="logos/spacex.png" alt="SpaceX" />
+          <img src="logos/openai.png" alt="OpenAI" />
+          <img src="logos/instagram.png" alt="Instagram" />
+          <img src="logos/cursor.png" alt="Cursor" />
+          <img src="logos/pinterest.png" alt="Pinterest" />
+          <img src="logos/stripe.png" alt="Stripe" />
+        </div>
       </div>
     </div>
     <div class="footer">

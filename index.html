@@ -183,6 +183,18 @@
         opacity: 1;
       }
 
+      .inline-link {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .inline-link:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
       @media (max-width: 768px) {
         .tagline {
           font-size: 1.2rem;
@@ -220,7 +232,8 @@
         <p>
           At Wayd Labs Inc. you'll be surrounded by world-class talent and the
           most ambitious individuals you'll ever meet. This is the place for you
-          to do your life's work and be remembered for years to come. Join us.
+          to do your life's work and be remembered for years to come.
+          <a href="join-the-team.html" class="inline-link"> Join us.</a>
         </p>
         <p>
           We are backed & received offers by the same legendary investors of:
@@ -243,7 +256,7 @@
       >
         <img src="insta.webp" alt="Instagram" />
       </a>
-      <a href="support.html" class="footer-link">Contact Us</a>
+      <!-- <a href="support.html" class="footer-link">Contact Us</a> -->
       <a href="join-the-team.html" class="footer-link">Join The Team</a>
     </div>
     <script>

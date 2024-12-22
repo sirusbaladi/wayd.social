@@ -55,62 +55,43 @@
         font-size: 1rem;
         line-height: 1.6;
       }
-      .positions {
-        text-align: left;
-        margin-bottom: 60px;
-      }
-      .position {
-        margin-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 20px;
-      }
-      .position h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        cursor: pointer;
+
+      /* Video container styles from index page */
+      .video-container {
+        width: 70%;
+        max-width: 800px;
+        margin: 20px auto;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        position: relative;
       }
-      .position h2::after {
-        content: "+";
-        font-size: 1.5rem;
-        transition: transform 0.3s ease;
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
       }
-      .position.active h2::after {
-        transform: rotate(45deg);
+
+      .mute-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        z-index: 2;
       }
-      .position-content {
-        font-size: 1rem;
-        line-height: 1.6;
-        opacity: 0.8;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease, margin 0.5s ease, opacity 0.5s ease;
-        margin: 0;
-      }
-      .position.active .position-content {
-        max-height: none;
-        margin-top: 10px;
-        opacity: 1;
-      }
-      .apply-info {
-        /* font-size: 1.0rem; */
-        margin-bottom: 40px;
-      }
-      .email {
-        color: #47b6e8;
-        text-decoration: none;
-      }
-      .back-link {
-        display: inline-block;
-        color: #fff;
-        text-decoration: none;
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-      }
-      .back-link:hover {
-        opacity: 1;
+
+      .mute-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
       }
 
       .roles-grid {
@@ -157,6 +138,24 @@
         margin: 0;
       }
 
+      .apply-info {
+        margin-bottom: 40px;
+      }
+      .email {
+        color: #47b6e8;
+        text-decoration: none;
+      }
+      .back-link {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+      .back-link:hover {
+        opacity: 1;
+      }
+
       @media (min-width: 768px) {
         .roles-grid {
           grid-template-columns: 1fr 1fr;
@@ -186,11 +185,19 @@
           of urgency.
         </p>
       </div>
+
+      <div class="video-container">
+        <video autoplay loop muted playsinline id="myVideo">
+          <source src="video2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <button class="mute-button" id="muteButton">Unmute</button>
+      </div>
+
       <div class="roles-grid">
         <a href="https://google.com" class="role-card">
           <h3 class="role-title">Product Designer Architect</h3>
           <div class="role-location">New York City</div>
-          <!-- <p class="role-description">Design and architect revolutionary social experiences that enhance human connections. Shape the future of social networking with autonomous social agents.</p> -->
         </a>
 
         <a href="https://google.com" class="role-card">
@@ -202,16 +209,24 @@
       <p class="apply-info">
         We do not use recruiters for assessments. All applications are evaluated
         by our CEO.
-        <!-- <a href="mailto:sirus@wayd.social" class="email">sirus@wayd.social</a> -->
       </p>
 
       <a href="index.html" class="back-link">&larr; Back to Home</a>
     </div>
+
     <script>
-      document.querySelectorAll(".position h2").forEach((header) => {
-        header.addEventListener("click", () => {
-          header.parentElement.classList.toggle("active");
-        });
+      // Video mute/unmute functionality
+      const video = document.getElementById("myVideo");
+      const muteButton = document.getElementById("muteButton");
+
+      muteButton.addEventListener("click", () => {
+        if (video.muted) {
+          video.muted = false;
+          muteButton.textContent = "Mute";
+        } else {
+          video.muted = true;
+          muteButton.textContent = "Unmute";
+        }
       });
     </script>
   </body>

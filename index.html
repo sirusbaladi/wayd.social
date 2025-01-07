@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wayd</title>
+    <title>Wayd</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Oswald:wght@500&display=swap");
 
@@ -145,10 +145,20 @@
       }
 
       .footer {
+        /* Ensure the footer takes the full width and sticks to the bottom */
         width: 100%;
+        margin-top: auto;
+        /* Center the content vertically and horizontally */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center them horizontally */
         padding: 20px 0;
         text-align: center;
-        margin-top: auto;
+      }
+
+      .footer-link {
+        /* Add some spacing below "Join The Team" */
+        margin-bottom: 10px;
       }
 
       .instagram {
@@ -167,7 +177,7 @@
         width: 24px;
         height: 24px;
         vertical-align: middle;
-        margin-right: 5px;
+        margin-right: 0px;
       }
 
       .footer-link {
@@ -175,8 +185,9 @@
         text-decoration: none;
         opacity: 0.6;
         transition: opacity 0.3s ease;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-left: 10px;
+        margin-bottom: 10px;
       }
 
       .footer-link:hover {
@@ -249,6 +260,7 @@
       </div>
     </div>
     <div class="footer">
+      <a href="join-the-team.html" class="footer-link">Join The Team</a>
       <a
         href="https://www.instagram.com/wayd.app/"
         target="_blank"
@@ -257,7 +269,6 @@
         <img src="insta.webp" alt="Instagram" />
       </a>
       <!-- <a href="support.html" class="footer-link">Contact Us</a> -->
-      <a href="join-the-team.html" class="footer-link">Join The Team</a>
     </div>
     <script>
       // Existing logo movement script

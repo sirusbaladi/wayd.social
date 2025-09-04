@@ -36,6 +36,8 @@
         margin: 0 auto;
         padding: 60px 20px;
         text-align: center;
+        position: relative;
+        z-index: 1; /* above starfield */
       }
       .logo-link {
         display: inline-block;
@@ -161,9 +163,28 @@
           grid-template-columns: 1fr 1fr;
         }
       }
+
+      /* Futuristic constellation section */
+      .constellation {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        margin: 12px 0 28px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: radial-gradient(1200px 600px at 10% -10%, rgba(71, 182, 232, 0.06), transparent 60%),
+                    radial-gradient(800px 400px at 90% 120%, rgba(255,255,255,0.04), transparent 60%);
+      }
+      @media (max-width: 768px) {
+        .constellation { height: 200px; }
+      }
     </style>
   </head>
   <body>
+    <script src="cosmic-glow.js"></script>
+    <script src="starfield.js"></script>
+    <script src="constellation.js"></script>
     <div class="container">
       <a href="index.html" class="logo-link">
         <img src="wayd.png" alt="wayd logo" class="logo" />
@@ -178,12 +199,10 @@
           projects that will make humans more human. In a world full of AI
           companions, AI friends, and AI everything, we believe the AI best
           use-case is not to substitute but enhance human connections. We are
-          building the first social network with autonomous social agents.
+          building the first social network with autonomous social agents. 
         </p>
         <p>
-          We are driven by ambitious goals, fast execution, and a strong sense
-          of urgency. We are assembling the team to make our first "rocket"
-          launch happen. From 0 to 1.
+          If we succeed, you will have helped create the most important consumer network of this decade.
         </p>
       </div>
 
@@ -198,12 +217,7 @@
         </button>
       </div>
       -->
-      <div class="art-image-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 32px;">
-        <img src="images/olafu.png" alt="Olafur Eliasson — The Weather Project (2003)" style="max-width: 80%; height: auto; border-radius: 8px; margin-bottom: 12px;" />
-        <div style="font-size: 0.98rem; color: #aaa; font-style: italic; text-align: center;">
-          Olafur Eliasson — The Weather Project (2003).
-        </div>
-      </div>
+      <div id="constellation-root" class="constellation"></div>
 
       <div class="general-description" style="margin-top: 40px">
         <p>
@@ -244,12 +258,12 @@
       <div class="roles-grid">
         <a href="https://tally.so/r/w8EObo" target="_blank" class="role-card">
           <h3 class="role-title">Artist as Designer</h3>
-          <div class="role-location">New York City / San Francisco</div>
+          <div class="role-location">San Francisco</div>
         </a>
 
-        <a href="https://tally.so/r/mOd05a" target="_blank" class="role-card">
+        <a href="https://tally.so/r/31ebMW" target="_blank" class="role-card">
           <h3 class="role-title">CTO / Founding Software Engineer</h3>
-          <div class="role-location">New York City</div>
+          <div class="role-location">San Francisco</div>
         </a>
       </div>
 

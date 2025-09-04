@@ -33,6 +33,8 @@
         justify-content: flex-start;
         padding-top: 60px;
         gap: 20px;
+        position: relative;
+        z-index: 1; /* ensure above starfield */
       }
 
       .join-team {
@@ -154,6 +156,8 @@
         align-items: center; /* Center them horizontally */
         padding: 20px 0;
         text-align: center;
+        position: relative;
+        z-index: 1; /* above starfield */
       }
 
       .footer-link {
@@ -222,10 +226,12 @@
     </style>
   </head>
   <body>
+    <script src="cosmic-glow.js"></script>
+    <script src="starfield.js"></script>
     <div class="main-content">
       <img src="wayd.png" alt="wayd logo" class="logo" id="logo" />
       <div class="tagline">
-        WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR?
+        WHAT IF THE NEXT SOCIAL NETWORK WORKED LIKE A SELF-DRIVING CAR
       </div>
       <div class="video-container">
         <video autoplay loop muted playsinline id="myVideo">

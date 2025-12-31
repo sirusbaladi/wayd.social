@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  <title>Wayd — Not Found</title>
+
+  <script>
+    (function () {
+      var path = window.location.pathname || "";
+      if (path === "/accept" || path.indexOf("/accept/") === 0) {
+        window.location.replace("https://wayd.social");
+      }
+    })();
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+        sans-serif;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      width: min(640px, 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 20px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+      font-weight: 650;
+      letter-spacing: 0.2px;
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    a {
+      color: #47b6e8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hint {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>Page not found</h1>
+    <p>The page you requested doesn’t exist.</p>
+    <p><a href="/">Go home</a></p>
+    <p class="hint">
+      If you were sent an <code>/accept/…</code> link and aren’t redirected,
+      make sure JavaScript is enabled.
+    </p>
+  </main>
+</body>
+
+</html>
